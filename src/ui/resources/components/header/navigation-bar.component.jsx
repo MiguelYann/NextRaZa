@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 import { ReactComponent as Logo } from '../../../../assets/original.svg';
 
-import './header.style.scss';
+import './navigation-bar.style.scss';
 
-const Header = () => (
+const NavigationBar = () => (
   
   <div className='header'>
     <Link className='logo-container' to='/'>
@@ -28,4 +28,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default NavigationBar;
