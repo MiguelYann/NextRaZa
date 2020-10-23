@@ -1,10 +1,10 @@
 import React from 'react';
 import './home.style.scss';
-import Directory from '../../resources/components/directory/directory.component';
+import CategoryList from '../../resources/components/category-list/category-list.component';
 const HomePage = () => {
   return (
     <div className="homepage">
-      <Directory />
+      <CategoryList />
     </div>
   );
 };

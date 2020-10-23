@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import dummySections from '../../../../data/dummy_data';
-import MenuItem from '../menu-item/menu-item.component';
+import CategoryItem from '../category-item/category-item.component';
 
-class Directory extends Component {
+class CategoryList extends Component {
   state = {
     sections: dummySections,
   };
@@ -13,11 +13,11 @@ class Directory extends Component {
     return (
       <div className="menu">
         {sections.map(({ id, imageUrl, title }) => {
-          return <MenuItem key={id} title={title} imageUrl={imageUrl} />;
+          return <CategoryItem key={id} title={title} imageUrl={imageUrl} />;
         })}
       </div>
     );
   }
 }
 
-export default Directory;
+export default CategoryList;
