@@ -4,7 +4,7 @@ import './category-item.style.scss';
 const CategoryItem = ({ title, imageUrl }) => {
   return (
     <div
-      className="menu-item"
+      className="menu-item background-image"
       style={{
         backgroundImage: `url(${imageUrl})`,
       }}
