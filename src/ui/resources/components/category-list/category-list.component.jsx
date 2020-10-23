@@ -12,8 +12,8 @@ class CategoryList extends Component {
     const { sections } = this.state;
     return (
       <div className="menu">
-        {sections.map(({ id, imageUrl, title }) => {
-          return <CategoryItem key={id} title={title} imageUrl={imageUrl} />;
+        {sections.map(({ id, ...sectionProps }) => {
+          return <CategoryItem key={id} {...sectionProps} />;
         })}
       </div>
     );

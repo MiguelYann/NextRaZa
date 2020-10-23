@@ -1,9 +1,16 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './category-item.style.scss';
 
-const CategoryItem = ({ title, imageUrl }) => {
+const CategoryItem = ({ linkUrl, title, imageUrl, history, match }) => {
+
+const goToSection = () =>  {
+  console.log(match);
+    history.push(`${match.url}${linkUrl}`)
+  }
   return (
     <div
+    onClick={goToSection}
       className="menu-item background-image"
       style={{
         backgroundImage: `url(${imageUrl})`,
@@ -17,4 +24,4 @@ const CategoryItem = ({ title, imageUrl }) => {
   );
 };
 
-export default CategoryItem;
+export default withRouter(CategoryItem);
