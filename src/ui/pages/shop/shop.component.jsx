@@ -1,7 +1,7 @@
 import React from 'react';
 import './shop.component.scss';
 import fakeCollections from '../../../data/products';
-import PreviewProductList from '../../resources/components/preview-products/preview-product-list.component';
+import PreviewProductList from '../../resources/components/preview-product-list/preview-product-list.component';
 
 export class Shop extends React.Component {
   constructor(props) {
