@@ -1,9 +1,9 @@
 import React from 'react';
+import ButtonForm from '../buttons/button-form/buttom-form.component';
 import InputForm from '../input-form/input-form.component';
 import './sign-in.component.scss';
 
 export default class SignIn extends React.Component {
-  
   constructor(props) {
     super(props);
   }
@@ -48,8 +48,7 @@ export default class SignIn extends React.Component {
             required
           />
 
-          <input type="submit" value="Submit" />
-
+          <ButtonForm type="submit">Je me connecte</ButtonForm>
         </form>
       </div>
     );
