@@ -2,4 +2,4 @@
 
 ## Launch
 
-Accessible via [nextRaza](https://nextraza-113b8.firebaseapp.com/)
+Accessible via [NextRaza](https://nextraza-113b8.firebaseapp.com/)
