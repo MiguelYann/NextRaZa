@@ -1,5 +1,5 @@
 import React from 'react';
-import { signInWithGoogle } from '../../../../services/firebase/firebase-utils';
+import { signInWithGoogle } from '../../../../services/firebase/firebase-services';
 import ButtonForm from '../buttons/button-form/buttom-form.component';
 import InputForm from '../input-form/input-form.component';
 import './sign-in.component.scss';
@@ -50,7 +50,7 @@ export default class SignIn extends React.Component {
           />
 
           <ButtonForm type="submit">Je me connecte</ButtonForm>
-          <ButtonForm onClick={signInWithGoogle} type="submit">Connexion avec Google</ButtonForm>
+          <ButtonForm onClick={signInWithGoogle} type="submit">Avec Google</ButtonForm>
         </form>
       </div>
     );

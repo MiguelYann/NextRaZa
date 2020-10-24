@@ -1,6 +1,3 @@
-import firebase from 'firebase'
-require('firebase/auth');
-
 export const configurationFirebase = {
   //BAD PRACTISE, I WILL CHANGE IT TO KEYVAULT😅
   apiKey: 'AIzaSyAaVy_Bow6_M9WIBaKg64yki0cRZ67jqfo',
@@ -12,11 +9,3 @@ export const configurationFirebase = {
   appId: '1:491692059749:web:142e3a9855701ede2baa8c',
   measurementId: 'G-74DQQB9CX3',
 };
-
-firebase.initializeApp(configurationFirebase);
-export const auth = firebase.auth();
-const providerGoogle = new firebase.auth.GoogleAuthProvider()
-
-providerGoogle.setCustomParameters({prompt: 'select_account'});
-
-export const signInWithGoogle = () => auth.signInWithPopup(providerGoogle);
