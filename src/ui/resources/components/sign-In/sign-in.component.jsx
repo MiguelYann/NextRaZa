@@ -1,4 +1,5 @@
 import React from 'react';
+import { signInWithGoogle } from '../../../../services/firebase/firebase-utils';
 import ButtonForm from '../buttons/button-form/buttom-form.component';
 import InputForm from '../input-form/input-form.component';
 import './sign-in.component.scss';
@@ -36,7 +37,7 @@ export default class SignIn extends React.Component {
             type="email"
             name="userMail"
             value={this.state.userMail}
-            required
+            
           />
           <InputForm
             id="userpwd"
@@ -45,10 +46,11 @@ export default class SignIn extends React.Component {
             name="userPassword"
             type="password"
             value={this.state.userPassword}
-            required
+            
           />
 
           <ButtonForm type="submit">Je me connecte</ButtonForm>
+          <ButtonForm onClick={signInWithGoogle} type="submit">Connexion avec Google</ButtonForm>
         </form>
       </div>
     );
