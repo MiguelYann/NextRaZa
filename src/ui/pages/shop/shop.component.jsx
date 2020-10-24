@@ -4,6 +4,7 @@ import fakeCollections from '../../../data/mocks/products';
 import PreviewProductList from '../../resources/components/preview-product-list/preview-product-list.component';
 
 export class Shop extends React.Component {
+  
   constructor(props) {
     super(props); //DEPRECIATE
   }

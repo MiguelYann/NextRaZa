@@ -4,6 +4,7 @@ import dummySections from '../../../../data/mocks/dummy_data';
 import CategoryItem from '../category-item/category-item.component';
 
 class CategoryList extends Component {
+  
   state = {
     sections: dummySections,
   };
@@ -12,9 +13,9 @@ class CategoryList extends Component {
     const { sections } = this.state;
     return (
       <div className="menu">
-        {sections.map(({ id, ...sectionProps }) => {
-          return <CategoryItem key={id} {...sectionProps} />;
-        })}
+        {sections.map(({ id, ...sectionProps }) => (
+          <CategoryItem key={id} {...sectionProps} />
+        ))}
       </div>
     );
   }

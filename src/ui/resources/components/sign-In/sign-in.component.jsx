@@ -3,6 +3,7 @@ import InputForm from '../input-form/input-form.component';
 import './sign-in.component.scss';
 
 export default class SignIn extends React.Component {
+  
   constructor(props) {
     super(props);
   }
@@ -48,7 +49,7 @@ export default class SignIn extends React.Component {
           />
 
           <input type="submit" value="Submit" />
-          
+
         </form>
       </div>
     );

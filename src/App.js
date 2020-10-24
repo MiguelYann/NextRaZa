@@ -16,7 +16,6 @@ function App() {
         <Route path="/hats" component={Hats}/> 
         <Route path="/shop" component={Shop} />
         <Route path="/signin" component={SignInAndSignUp}/>
-
       </Switch>
     </div>
   );

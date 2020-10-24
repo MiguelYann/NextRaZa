@@ -5,9 +5,9 @@ import './category-item.style.scss';
 const CategoryItem = ({ linkUrl, title, imageUrl, history, match }) => {
 
 const goToSection = () =>  {
-  console.log(match);
     history.push(`${match.url}${linkUrl}`)
   }
+  
   return (
     <div
     onClick={goToSection}
