@@ -18,7 +18,7 @@ export default class SignIn extends React.Component {
     event.preventDefault();
   };
 
-  handleInput = (event) => {
+  handleInputSignIn = (event) => {
     const { name, value } = event.target;
     console.log(name, value);
     this.setState(() => ({ [name]: value }));
@@ -33,7 +33,7 @@ export default class SignIn extends React.Component {
           <InputForm
             id="usermail"
             textLabel="Entrez vos identifiants"
-            handleInput={this.handleInput}
+            handleInput={this.handleInputSignIn}
             type="email"
             name="userMail"
             value={this.state.userMail}
@@ -42,7 +42,7 @@ export default class SignIn extends React.Component {
           <InputForm
             id="userpwd"
             textLabel="Entrez votre mot de passe"
-            handleInput={this.handleInput}
+            handleInput={this.handleInputSignIn}
             name="userPassword"
             type="password"
             value={this.state.userPassword}

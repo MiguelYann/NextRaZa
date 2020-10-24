@@ -14,14 +14,14 @@ export const signInWithGoogle = () => auth.signInWithPopup(providerGoogle);
 
 const firestoreRepository = firebase.firestore();
 
-export const createUserDocument = async (currentUser) => {
+export const createUserDocument = async (currentUser, otherData) => {
   const queryUser = await firestoreRepository.doc(`users/${currentUser.uid}`);
   const snapShotUser = await queryUser.get();
 
-  const { email, photoURL, displayName } = currentUser;
+  const { email, photoURL } = currentUser;
   if (!snapShotUser.exists) {
     try {
-      await queryUser.set({ email, photoURL, displayName });
+      await queryUser.set({ email, photoURL, ...otherData });
     } catch (error) {
       console.log(error);
     }
