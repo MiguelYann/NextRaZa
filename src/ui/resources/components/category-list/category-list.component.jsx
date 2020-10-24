@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import dummySections from '../../../../data/dummy_data';
+import dummySections from '../../../../data/mocks/dummy_data';
 import CategoryItem from '../category-item/category-item.component';
 
 class CategoryList extends Component {
