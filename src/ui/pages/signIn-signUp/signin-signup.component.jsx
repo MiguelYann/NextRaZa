@@ -1,12 +1,12 @@
 import React from 'react';
 import SignIn from '../../resources/components/sign-In/sign-in.component';
+import './signin-signup.component.scss';
 
 const SignInAndSignUp = () => {
   return (
-    <>
-      <h1>Bienvenue sur NextRaza</h1>
-      <SignIn/ >
-    </>
+    <div className="sign-in-and-sign-up">
+      <SignIn />
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import InputForm from '../inputForm/input-form.component';
+import './sign-in.component.scss';
 
 export default class SignIn extends React.Component {
   constructor(props) {
@@ -24,13 +25,14 @@ export default class SignIn extends React.Component {
   render() {
     return (
       <div className="sign-in">
-        <h2>Vous avez un compte?</h2>
+        <h2 className="title">Vous avez un compte?</h2>
         <span>Connectez-vous </span>
         <form onSubmit={this.handleSubmitSignIn}>
           <InputForm
             id="usermail"
             textLabel="Entrez vos identifiants"
             handleInput={this.handleInput}
+            type="email"
             name="userMail"
             value={this.state.userMail}
             required
@@ -40,6 +42,7 @@ export default class SignIn extends React.Component {
             textLabel="Entrez votre mot de passe"
             handleInput={this.handleInput}
             name="userPassword"
+            type="password"
             value={this.state.userPassword}
             required
           />
