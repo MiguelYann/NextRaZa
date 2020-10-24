@@ -15,15 +15,17 @@ export const signInWithGoogle = () => auth.signInWithPopup(providerGoogle);
 const firestoreRepository = firebase.firestore();
 
 export const createUserDocument = async (currentUser) => {
-  const queryUser = await firestoreRepository.doc('users/124kfgg');
+  const queryUser = await firestoreRepository.doc(`users/${currentUser.uid}`);
   const snapShotUser = await queryUser.get();
 
-  const { email, uid, photoURL, displayName } = currentUser;
-  if (snapShotUser.exists) {
-    return;
+  const { email, photoURL, displayName } = currentUser;
+  if (!snapShotUser.exists) {
+    try {
+      await queryUser.set({ email, photoURL, displayName });
+    } catch (error) {
+      console.log(error);
+    }
   }
-
-  await queryUser.set({ email, uid, photoURL, displayName });
 
   return queryUser;
 };
