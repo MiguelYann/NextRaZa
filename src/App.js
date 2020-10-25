@@ -11,6 +11,7 @@ import {
   createUserDocument,
 } from './services/firebase/firebase-services';
 
+
 export default class App extends React.Component {
   constructor() {
     super();
@@ -30,7 +31,7 @@ export default class App extends React.Component {
         userReference.onSnapshot((snapShotUser) => {
           console.log(snapShotUser.data());
           this.setState(() => ({
-            currentUser: {id: snapShotUser.id, ...snapShotUser.data() },
+            currentUser: { id: snapShotUser.id, ...snapShotUser.data() },
           }));
         });
       }
